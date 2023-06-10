@@ -44,6 +44,6 @@ async function notifyTelegram(message) {
         console.error('Error sending Telegram message:', error);
     }
 }
-notifyTelegram('Starting BNB balance checker...');
+notifyTelegram('Starting balance checker...');
 checkBalance();
 setInterval(checkBalance, 30000); // Check every 30 seconds
