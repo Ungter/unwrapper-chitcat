@@ -27,7 +27,7 @@ async function checkBalance() {
 
     console.log('current contract balance:' + ethers.formatEther(balance))
     
-    if (balance > lastBalance) {
+    if (balance > lastBalance && tokensLeftToUnwrap > 0) {
         const increase = balance - lastBalance;
         console.log('Balance increased! New balance: ' + ethers.formatEther(balance));
         notifyTelegram('Balance increased! New balance: ' + ethers.formatEther(balance));
