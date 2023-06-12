@@ -54,7 +54,7 @@ async function checkBalance() {
 }
 
 async function notifyTelegram(message) {
-    const url = `https://api.telegram.org/bot<BOT_KEY>/sendMessage<CHAT_ID>?chat_id=&text=${encodeURIComponent(message)}`;
+    const url = `https://api.telegram.org/bot<BOT_KEY>/sendMessage?chat_id=<CHAT_ID>&text=${encodeURIComponent(message)}`;
     try {
         await axios.get(url);
     } catch (error) {
